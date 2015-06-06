@@ -87,7 +87,7 @@ var requestFactory = function(consumer_key, consumer_secret, oauth_token, oauth_
         if (result.$.stat != 'ok') {
           var custom_err = new Error('stat != ok in Flickr API response');
           logger.debug('Flickr failure response: %j', result, res.headers);
-          return callback(custom_err);
+          return callback(custom_err, result);
         }
 
         callback(null, result);
