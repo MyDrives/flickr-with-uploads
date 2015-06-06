@@ -6,6 +6,9 @@ var xml2js = require('xml2js');
 
 var json = require('./json');
 var request = require('./request');
+
+logger.set({ level: 30 });
+
 // var response = require('./response');
 
 // requestFactory uses these urls, but this hash is also attached to the requestFactory
